@@ -1,6 +1,7 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Linear\\ Algebra"
+subtitle: "with application in Python"
+author: "Deepak Bastola"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
