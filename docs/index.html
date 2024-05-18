@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Linear Algebra</title>
+  <meta name="description" content="Linear Algebra" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Linear Algebra" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Linear Algebra" />
+  
+  
+  
+
+<meta name="author" content="Deepak Bastola" />
+
+
+<meta name="date" content="2024-05-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="the-pool-of-tears.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Linear-Algebra</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Vector Spaces</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#vector-space"><i class="fa fa-check"></i><b>1.1</b> Vector Space</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>2</b> The pool of tears</a></li>
+<li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Linear Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Linear Algebra</h1>
+<p class="author"><em>Deepak Bastola</em></p>
+<p class="date"><em>2024-05-18</em></p>
+</div>
+<div id="vector-spaces" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Vector Spaces<a href="index.html#vector-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="vector-space" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Vector Space<a href="index.html#vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A vector space <span class="math inline">\(V\)</span> over a field <span class="math inline">\(F\)</span> is a set equipped with two operations:</p>
+<p><strong>Vector Addition:</strong> An operation <span class="math inline">\(+ : V \times V \to V\)</span> that assigns to each pair of vectors <span class="math inline">\(\alpha, \beta \in V\)</span> a vector <span class="math inline">\(\alpha + \beta \in V\)</span>.</p>
+<p><strong>Scalar Multiplication:</strong> An operation <span class="math inline">\(\cdot : F \times V \to V\)</span> that assigns to each scalar <span class="math inline">\(a \in F\)</span> and each vector <span class="math inline">\(\alpha \in V\)</span> a vector <span class="math inline">\(a \cdot \alpha \in V\)</span>.</p>
+<p>These operations must satisfy the following axioms for all vectors <span class="math inline">\(\alpha, \beta, \gamma \in V\)</span> and all scalars <span class="math inline">\(a, b \in F\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Vector Addition
+<ol style="list-style-type: lower-alpha">
+<li>Commutativity of Addition: <span class="math inline">\(\alpha + \beta = \beta + \alpha\)</span></li>
+<li>Associativity of Addition: <span class="math inline">\((\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)\)</span></li>
+<li>Identity Element of Addition (Law of Zero): There exists a unique element <span class="math inline">\(\mathbf{0} \in V\)</span> such that <span class="math inline">\(\alpha + \mathbf{0} = \alpha\)</span> for all <span class="math inline">\(\alpha \in V\)</span>.</li>
+<li>Inverse Elements of Addition: For every <span class="math inline">\(\alpha \in V\)</span>, there exists a unique element <span class="math inline">\(-\alpha \in V\)</span> such that <span class="math inline">\(\alpha + (-\alpha) = \mathbf{0}\)</span>.</li>
+</ol></li>
+<li>Scalar Multiplication
+<ol style="list-style-type: lower-alpha">
+<li>Assosiativity of Scalar Multiplication: <span class="math inline">\(a \cdot (b \cdot \alpha) = (a b) \cdot \alpha\)</span></li>
+<li>Identity Element of Scalar Multiplication (Law of One): <span class="math inline">\(1 \cdot \alpha = \alpha\)</span> for all <span class="math inline">\(\alpha \in V\)</span>, where <span class="math inline">\(1\)</span> is the multiplicative identity in <span class="math inline">\(F\)</span>.</li>
+</ol></li>
+<li>Distributivity
+<ol style="list-style-type: lower-alpha">
+<li>Distributivity of Scalar Multiplication with Respect to Vector Addition: <span class="math inline">\(a \cdot (\alpha + \beta) = a \cdot \alpha + a \cdot \beta\)</span></li>
+<li>Distributivity of Scalar Multiplication with Respect to Field Addition: <span class="math inline">\((a + b) \cdot \alpha = a \cdot \alpha + b \cdot \alpha\)</span></li>
+</ol></li>
+</ol>
+<hr />
+<p><strong>Examples 1.</strong> The n-tuple space, <span class="math inline">\(\mathbb{F^n}\)</span>.</p>
+<p>In fact, <span class="math inline">\(\mathbb{F}^n\)</span> is the set of all ordered <span class="math inline">\(n\)</span>-tuples of elements of <span class="math inline">\(\mathbb{F}\)</span>, i.e.,</p>
+<p><span class="math display">\[ \mathbb{F}^n = \{(x_1, x_2, \ldots, x_n) \mid x_i \in \mathbb{F} \text{ for all } i = 1, 2, \ldots, n \}. \]</span>
+Since if <span class="math inline">\(\mathbf{u} = (u_1, u_2, \ldots, u_n)\)</span>, <span class="math inline">\(\mathbf{v} = (v_1, v_2, \ldots, v_n) \in \mathbb{F}^n\)</span> and <span class="math inline">\(a \in \mathbb{F}\)</span>, then <span class="math display">\[ \mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2, \ldots, u_n + v_n) \in \mathbb{F}^n\]</span> because each <span class="math inline">\(u_i + v_i \in \mathbb{F}\)</span> and <span class="math display">\[ a\mathbf{v} = (a v_1, a v_2, \ldots, a v_n) \in \mathbb{F}^n \]</span> because each <span class="math inline">\(a v_i \in \mathbb{F}\)</span>.</p>
+<p>For all vectors <span class="math inline">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{F}^n\)</span> and for all scalars <span class="math inline">\(a, b \in \mathbb{F}.\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Vector Addition
+<ol style="list-style-type: lower-alpha">
+<li><p>Commutativity of addition:
+<span class="math display">\[ \mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2, \ldots, u_n + v_n) = (v_1 + u_1, v_2 + u_2, \ldots, v_n + u_n) = \mathbf{v} + \mathbf{u}\]</span></p></li>
+<li><p>Associativity of addition:
+<span class="math display">\[\begin{align*}
+  (\mathbf{u} + \mathbf{v}) + \mathbf{w} &amp;= (u_1 + v_1, u_2 + v_2, \ldots, u_n + v_n) + \mathbf{w} \\&amp;= ((u_1 + v_1) + w_1, (u_2 + v_2) + w_2, \ldots, (u_n + v_n) + w_n) \\&amp;= (u_1 + (v_1 + w_1), u_2 + (v_2 + w_2), \ldots, u_n + (v_n + w_n))\\&amp;= \mathbf{u} + (v_1 + w_1, v_2 + w_2, \ldots, v_n + w_n) \\&amp;=\mathbf{u} + (\mathbf{v} + \mathbf{w})
+\end{align*}\]</span>
+Since addition in <span class="math inline">\(\mathbb{F}\)</span> is associative, <span class="math inline">\((u_i + v_i) + w_i = u_i + (v_i + w_i)\)</span> for all <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Identity Element of Addition :
+The zero vector <span class="math inline">\(\mathbf{0} = (0, 0, \ldots, 0) \in \mathbb{F}^n\)</span> acts as the additive identity because
+<span class="math display">\[ \mathbf{v} + \mathbf{0} = (v_1 + 0, v_2 + 0, \ldots, v_n + 0) = (v_1, v_2, \ldots, v_n) = \mathbf{v} \]</span></p></li>
+<li><p>Inverse Elements of Addition:
+For each <span class="math inline">\(\mathbf{v} = (v_1, v_2, \ldots, v_n) \in \mathbb{F}^n\)</span>, there exists <span class="math inline">\(-\mathbf{v} = (-v_1, -v_2, \ldots, -v_n) \in \mathbb{F}^n\)</span> such that
+<span class="math display">\[ \mathbf{v} + (-\mathbf{v}) = (v_1 + (-v_1), v_2 + (-v_2), \ldots, v_n + (-v_n)) = (0, 0, \ldots, 0) = \mathbf{0}\]</span>
+\end{enumerate}</p></li>
+</ol></li>
+<li>Scalar Multiplication
+<ol style="list-style-type: lower-alpha">
+<li>Associativity of scalar multiplication:
+<span class="math display">\[\begin{align*}
+  a(b \mathbf{v}) &amp;= a(b v_1, b v_2, \ldots, b v_n) = (a(b v_1), a(b v_2), \ldots, a(b v_n)) \\&amp;= ((ab) v_1, (ab) v_2, \ldots, (ab) v_n) = (ab) \mathbf{v}
+\end{align*}\]</span></li>
+<li>Identity Element of Scalar Multiplication:
+<span class="math display">\[ 1 \mathbf{v} = 1(v_1, v_2, \ldots, v_n) = (1 v_1, 1 v_2, \ldots, 1 v_n) = (v_1, v_2, \ldots, v_n) = \mathbf{v}\]</span></li>
+</ol></li>
+<li>Distributivity
+<ol style="list-style-type: lower-alpha">
+<li><p>Distributivity of scalar multiplication with respect to vector addition
+<span class="math display">\[\begin{align*}
+a(\mathbf{u} + \mathbf{v}) &amp;= a(u_1 + v_1, u_2 + v_2, \ldots, u_n + v_n) \\&amp;= (a(u_1 + v_1), a(u_2 + v_2), \ldots, a(u_n + v_n)) \\&amp;= (a u_1 + a v_1, a u_2 + a v_2, \ldots, a u_n + a v_n) \\&amp;= a \mathbf{u} + a \mathbf{v}   
+\end{align*}\]</span></p></li>
+<li><p>Distributivity of scalar multiplication with respect to field addition
+<span class="math display">\[\begin{align*}
+  (a + b)\mathbf{v} &amp;= (a + b)(v_1, v_2, \ldots, v_n) = ((a + b)v_1, (a + b)v_2, \ldots, (a + b)v_n) \\&amp;= (a v_1 + b v_1, a v_2 + b v_2, \ldots, a v_n + b v_n) \\&amp;= a \mathbf{v} + b \mathbf{v}
+  \end{align*}\]</span></p></li>
+</ol></li>
+</ol>
+<p>Thus, <span class="math inline">\(\mathbb{F}^n\)</span> satisfies all these axioms, it is a vector space.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="the-pool-of-tears.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/deepakbastola/Linear-Algebra//edit/main/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/deepakbastola/Linear-Algebra/blob/main/index.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
